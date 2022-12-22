@@ -1,0 +1,16 @@
+Content-Length: 362
+Server: nginx
+Content-Type: text/plain
+Last-Modified: Wed, 14 Sep 2022 13:07:46 GMT
+Etag: "39c-5e8a2d0ab65ce"
+Accept-Ranges: bytes
+Content-Encoding: gzip
+X-Edgeconnect-Midmile-Rtt: 4
+X-Edgeconnect-Midmile-Rtt: 115
+X-Edgeconnect-Origin-Mex-Latency: 17
+X-Edgeconnect-Origin-Mex-Latency: 17
+Date: Tue, 20 Dec 2022 22:11:59 GMT
+Vary: Accept-Encoding
+Set-Cookie: _t_ds=187b4f7f1671574319-212187b4f7f-0187b4f7f; expires=Wed, 20-Dec-2023 22:11:59 GMT; path=/; domain=.naukri.com; secure; HttpOnly
+Set-Cookie: ak_bmsc=80CB8EB72D26AA458AAF43BBAC00BF66~000000000000000000000000000000~YAAQNQgQAtcxmgaFAQAAJvCXMRLmxtD/1ZviMiCPLcK4fXPtoDxcXr/XJS5OgyV2GnXg2LqVfebua95BMSvtwXX0Ku6Vp9OdgWxa4TjvXmH+TD0u47xf55f6lLOLBuMoluJXufLznJF6lbixM7Txruha5uH/JzXkfqIhpggfhonFX9QQSDe6oQBG2JtPeap29ste3cuYACsC6gGKGVZpjflDj0JEJgxfxLgcIhhRdZ+Qcs0HSFWRr0lbCs753vCuVZbdnMSppX0toB9jaTCwuzH3Gm6XZlWiub55ixA190ibTlOU4K8A4SKA8193xvSvMbnXZj+75PCEi8V6BcuwrrC0lVLWBEuwzdpLp0KN5Em2yo9Exxjkj1vM; Domain=.naukri.com; Path=/; Expires=Wed, 21 Dec 2022 00:11:59 GMT; Max-Age=7200; HttpOnly
+Strict-Transport-Security: max-age=86400 ; preload
