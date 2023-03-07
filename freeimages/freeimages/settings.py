@@ -91,5 +91,5 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
-ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipelines':1}
+ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline':1}
 IMAGES_STORE = 'images'

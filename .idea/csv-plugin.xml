@@ -3,27 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\friday\friday\real.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\friday\friday\real_estate.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\friday\friday\real_estates.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\gorillamill\gorilla_products.csv">
           <value>
             <Attribute>
@@ -38,7 +17,21 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\naukri\RemoteJobs.csv">
+        <entry key="\nairaland\nairaland.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\nairaland\nairaland\spiders\nairalandnew.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\nba\nba\spiders\nba.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
