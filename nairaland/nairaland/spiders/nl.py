@@ -1,26 +1,35 @@
-import scrapy
+# Importing of the necessary libraries
 from ..items import NairalandItem
 from scrapy.loader import ItemLoader
-from scrapy.spiders import CrawlSpider, Rule
-from scrapy.linkextractors import LinkExtractor
+import scrapy
+from scrapy import Request
 
-class NlSpider(CrawlSpider):
+
+# Building of scrapy framework for parsing the website
+
+class TotalspiderSpider(scrapy.Spider):
     name = 'nl'
-    allowed_domains = ['nairaland.com']
-    start_urls = ['https://www.nairaland.com/news/5200']
+    current_page = 2
+    start_urls = ['https://www.nairaland.com/news/']
 
 
-    rules = (
-        Rule(
-            LinkExtractor(restrict_xpaths=('//table[@summary="links"]')),
-            callback="parse",
-            follow=True),
+# Extracting links from all the pages
 
-        Rule(
-            LinkExtractor(restrict_xpaths=('//div[@class ="body"]/p[3]')),
-            callback="parse", follow=True),)
 
     def parse(self, response):
+        links =  response.css('[summary="links"] a::attr(href)').getall()
+        for link in links:
+            yield Request(url=link, callback=self.parse_categories)
+        total_pages = int(response.css('div.body p:nth-child(6) b:last-child::text').get())
+        url = 'https://www.nairaland.com/news/' + str(TotalspiderSpider.current_page)
+        if TotalspiderSpider.current_page <= total_pages:
+            TotalspiderSpider.current_page += 1
+            yield Request (url=url, callback=self.parse)
+
+
+# Parsing of the website
+
+    def parse_categories(self, response):
         item = ItemLoader(item=NairalandItem(), response=response, selector=response)
         item.add_xpath('poster', '//table[@summary="posts"]//tr[1]//td/a[@class="user"]/text()')
         item.add_xpath('time', '//table[@summary="posts"]//tr[1]//td/span[@class="s"]/b[1]/text()')
@@ -31,3 +40,5 @@ class NlSpider(CrawlSpider):
         item.add_xpath('date', '//table[@summary="posts"]//tr[1]//td/span[@class="s"]/b[3]/text()')
         item.add_value('url', response.url)
         yield item.load_item()
+
+
